@@ -23,7 +23,12 @@ class Cart
     private $date;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Ship::class, inversedBy="carts")
+     * @ORM\ManyToOne(targetEntity=Customer::class, inversedBy="cart")
+     */
+    private $customer;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Ship::class, inversedBy="cart")
      */
     private $ship;
 
@@ -44,6 +49,18 @@ class Cart
         return $this;
     }
 
+    public function getCustomer(): ?Customer
+    {
+        return $this->customer;
+    }
+
+    public function setCustomer(?Customer $customer): self
+    {
+        $this->customer = $customer;
+
+        return $this;
+    }
+
     public function getShip(): ?Ship
     {
         return $this->ship;
@@ -55,4 +72,5 @@ class Cart
 
         return $this;
     }
+
 }

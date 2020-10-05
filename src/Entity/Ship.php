@@ -34,17 +34,6 @@ class Ship
      */
     private $price;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Cart::class, mappedBy="ship")
-     */
-    private $carts;
-
-    public function __construct()
-    {
-        $this->cart = new ArrayCollection();
-        $this->carts = new ArrayCollection();
-    }
-
     public function getId(): ?int
     {
         return $this->id;
@@ -82,37 +71,6 @@ class Ship
     public function setPrice(int $price): self
     {
         $this->price = $price;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Cart[]
-     */
-    public function getCarts(): Collection
-    {
-        return $this->carts;
-    }
-
-    public function addCart(Cart $cart): self
-    {
-        if (!$this->carts->contains($cart)) {
-            $this->carts[] = $cart;
-            $cart->setShip($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCart(Cart $cart): self
-    {
-        if ($this->carts->contains($cart)) {
-            $this->carts->removeElement($cart);
-            // set the owning side to null (unless already changed)
-            if ($cart->getShip() === $this) {
-                $cart->setShip(null);
-            }
-        }
 
         return $this;
     }

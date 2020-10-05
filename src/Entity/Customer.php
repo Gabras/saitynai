@@ -34,6 +34,11 @@ class Customer
      */
     private $age;
 
+    public function __construct()
+    {
+        $this->cart = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;

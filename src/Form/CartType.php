@@ -13,6 +13,7 @@ class CartType extends AbstractType
     {
         $builder
             ->add('date')
+            ->add('customer')
             ->add('ship')
         ;
     }
