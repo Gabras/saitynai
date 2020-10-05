@@ -3,8 +3,6 @@
 namespace App\Entity;
 
 use App\Repository\CartRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -25,19 +23,9 @@ class Cart
     private $date;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Ship::class, inversedBy="cart")
+     * @ORM\ManyToOne(targetEntity=Ship::class, inversedBy="carts")
      */
     private $ship;
-
-    /**
-     * @ORM\ManyToMany(targetEntity=Customer::class, mappedBy="cart")
-     */
-    private $customers;
-
-    public function __construct()
-    {
-        $this->customers = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -64,34 +52,6 @@ class Cart
     public function setShip(?Ship $ship): self
     {
         $this->ship = $ship;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Customer[]
-     */
-    public function getCustomers(): Collection
-    {
-        return $this->customers;
-    }
-
-    public function addCustomer(Customer $customer): self
-    {
-        if (!$this->customers->contains($customer)) {
-            $this->customers[] = $customer;
-            $customer->addCart($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCustomer(Customer $customer): self
-    {
-        if ($this->customers->contains($customer)) {
-            $this->customers->removeElement($customer);
-            $customer->removeCart($this);
-        }
 
         return $this;
     }

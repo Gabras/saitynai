@@ -35,13 +35,14 @@ class Ship
     private $price;
 
     /**
-     * @ORM\OneToMany(targetEntity=cart::class, mappedBy="ship")
+     * @ORM\OneToMany(targetEntity=Cart::class, mappedBy="ship")
      */
-    private $cart;
+    private $carts;
 
     public function __construct()
     {
         $this->cart = new ArrayCollection();
+        $this->carts = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -86,27 +87,27 @@ class Ship
     }
 
     /**
-     * @return Collection|cart[]
+     * @return Collection|Cart[]
      */
-    public function getCart(): Collection
+    public function getCarts(): Collection
     {
-        return $this->cart;
+        return $this->carts;
     }
 
-    public function addCart(cart $cart): self
+    public function addCart(Cart $cart): self
     {
-        if (!$this->cart->contains($cart)) {
-            $this->cart[] = $cart;
+        if (!$this->carts->contains($cart)) {
+            $this->carts[] = $cart;
             $cart->setShip($this);
         }
 
         return $this;
     }
 
-    public function removeCart(cart $cart): self
+    public function removeCart(Cart $cart): self
     {
-        if ($this->cart->contains($cart)) {
-            $this->cart->removeElement($cart);
+        if ($this->carts->contains($cart)) {
+            $this->carts->removeElement($cart);
             // set the owning side to null (unless already changed)
             if ($cart->getShip() === $this) {
                 $cart->setShip(null);
@@ -115,4 +116,5 @@ class Ship
 
         return $this;
     }
+
 }
