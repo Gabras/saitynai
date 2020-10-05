@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\CustomerRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -31,6 +33,16 @@ class Customer
      * @ORM\Column(type="integer")
      */
     private $age;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=cart::class, inversedBy="customers")
+     */
+    private $cart;
+
+    public function __construct()
+    {
+        $this->cart = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -69,6 +81,32 @@ class Customer
     public function setAge(int $age): self
     {
         $this->age = $age;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|cart[]
+     */
+    public function getCart(): Collection
+    {
+        return $this->cart;
+    }
+
+    public function addCart(cart $cart): self
+    {
+        if (!$this->cart->contains($cart)) {
+            $this->cart[] = $cart;
+        }
+
+        return $this;
+    }
+
+    public function removeCart(cart $cart): self
+    {
+        if ($this->cart->contains($cart)) {
+            $this->cart->removeElement($cart);
+        }
 
         return $this;
     }

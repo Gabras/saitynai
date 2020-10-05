@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ShipRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -31,6 +33,16 @@ class Ship
      * @ORM\Column(type="integer")
      */
     private $price;
+
+    /**
+     * @ORM\OneToMany(targetEntity=cart::class, mappedBy="ship")
+     */
+    private $cart;
+
+    public function __construct()
+    {
+        $this->cart = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -69,6 +81,37 @@ class Ship
     public function setPrice(int $price): self
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|cart[]
+     */
+    public function getCart(): Collection
+    {
+        return $this->cart;
+    }
+
+    public function addCart(cart $cart): self
+    {
+        if (!$this->cart->contains($cart)) {
+            $this->cart[] = $cart;
+            $cart->setShip($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCart(cart $cart): self
+    {
+        if ($this->cart->contains($cart)) {
+            $this->cart->removeElement($cart);
+            // set the owning side to null (unless already changed)
+            if ($cart->getShip() === $this) {
+                $cart->setShip(null);
+            }
+        }
 
         return $this;
     }
