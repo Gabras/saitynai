@@ -15,7 +15,6 @@ class CustomerType extends AbstractType
             ->add('name')
             ->add('phone')
             ->add('age')
-            ->add('cart')
         ;
     }
 
