@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="550a6cea-f2de-46a7-ae05-6e2683710c01" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Customer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CustomerType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CustomerType.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +164,8 @@
       <option name="presentableId" value="Default" />
       <updated>1601892934960</updated>
       <workItem from="1601892936419" duration="7174000" />
-      <workItem from="1601914392394" duration="3317000" />
+      <workItem from="1601914392394" duration="4218000" />
+      <workItem from="1601966228784" duration="726000" />
     </task>
     <servers />
   </component>
@@ -182,6 +180,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="210" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601897468805" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1601966228861">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601966228861" />
     <state x="176" y="252" width="607" height="536" key="find.popup" timestamp="1601917687239">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
