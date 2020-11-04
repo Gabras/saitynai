@@ -52,12 +52,12 @@ class CartController extends AbstractApiController
     }
 
     /**
-     * @Route("/carts/{shipID}", methods={"GET"}, requirements={"shipID"="\d+"})
+     * @Route("/carts/{shipID}", methods={"GET"}, requirements={"id"="\d+"})
      */
     public function cartsByShip(Request $request, CartRepository $cartRepository, ShipRepository $shipRepository, $shipID): Response
     {
         $ship = $shipRepository->findOneBy($shipID);
-        $carts = $cartRepository->findByShip($ship);
+        $carts = $cartRepository->findByShip(3);
         return  $this->json($carts);
     }
 
