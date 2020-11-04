@@ -1,5 +1,67 @@
 lexik_jwt_authentication:
-    secret_key: '%env(resolve:JWT_SECRET_KEY)%'
-    public_key: '%env(resolve:JWT_PUBLIC_KEY)%'
-    pass_phrase: '%env(JWT_PASSPHRASE)%'
+    secret_key: 'MIIJrTBXBgkqhkiG9w0BBQ0wSjApBgkqhkiG9w0BBQwwHAQIApOtQSCtBg0CAggA
+                 MAwGCCqGSIb3DQIJBQAwHQYJYIZIAWUDBAEqBBCD7c0adMhhXLujclLXwRgoBIIJ
+                 UGRYjeP7jlX8ftez2dCbvBdt9zZeXujNqnMZcZJX7JblJvwyfqdRdsh9NFJ+/ptv
+                 zzVoZIT8yHeqetGSh+ZxdppCYF43ZHbwQXjPHR6eO+2t+qxPavEzpNkf3yQM9M3/
+                 7iQgJzfmScu1lhmb1VDBsv0vii827aZHHMgWcPguFlIfXB0y4qYjOXrZPbJrhH3X
+                 EWVBHiXcdP9grpCq5G5iQRzSwWIkMKqdcEcYV7FTf0XswHm1W3BM/qB0XWB41u7W
+                 b1C8hlfoTYaHbfwmsrp0bFeG0Vwm6yWqzFhab7o9DItPFcVJXu/dVityA/xN0Mrk
+                 vdMnF513uB8gpFoxkK2vAI6DY/HQCo39K5Ri6hsSd+4uvR5JQB2emitqXygL6JhF
+                 CRRV9WXQex6t3oxzxxIOV67XKKo0ZEIY7KMKcl+gqbZBCuFndYFGd7JLl6jzJ3WR
+                 Dz+2X5RXi9rGc8E3FoBO/sHXiUa6e/RNljyVOPjNHAuAtpnvtOOehBC82k4wfP/W
+                 u8DF3NRmKbGCD+9p+dOs7Lr5TmWOnm+98ezFEBTJbe/ShaUDcnKvHmIO+i9HVSPQ
+                 L60omm1OlM8ps42BMwM9EvYD/vu0hlEaF3/UM8byV7fYOIlM4Z6/n/2Fqht/BklQ
+                 G7FIecEDpohI8j3QB88uACaZOayVtHlIKDLG/TqhWz66SdS5iSasmKcHpq5+y3tG
+                 VJd03oY3ZdB5unil3+SIJUm6KTcTWl1I1GKONU+Z/1H2/UMJ+gC1bHLRH467jMq7
+                 2owVn0gO/RChgyXlfQ6Jf0GTXCAXFVTPTczIosCybhAJcAgCgRjb7VGrR4Ks0doI
+                 A/LwwgmqvC8t10noXEUznzy8b1fIPiNO21F6w4Ubztcc0lRtC8jktkTlwPKahhVR
+                 yeIqDwX3ehTfN0MAYk+qoOIMi5NiI4L4Fgwrvruwhpwdiw0KPKqcNKbBqZk6V8C9
+                 TR/D5fe2LZjj/T1i2wUjQ/4ZTUHo7fiy3AhIMJpRz1YHttAVYpYXL1DIZ86D85zk
+                 abw1Dva03RUWyBOZqu6uwnQZv3J/clU/Bun7+NYWO68V4asEtTaW+IlhcoQYABv7
+                 OEoXLUnZrRon+aAK/GSiEFQrK4VbmW0KKx+VqKvDVkPH2jRR69gXCbkDmxQzai3P
+                 PtJnLGPIaXFnfxz/6wj56PeEo2JtiR10jlyqGeDHo2zjuTMrVIi+UTlQqPbm5us6
+                 IT9gsaRw0amDkw7WIlzp6jWgeGLxK1tq+jiIHpNIaG3mZgcFn4i9OudhoiwruA8q
+                 I0j1MrGETz9pXnDgYTUKaZZOaif1CUkAEMqMUeH2CDihcw1N7Xlt1XPsAaIkTnub
+                 9IzWVI2Tu8Ru3Sh4cvz+cQjzB/vTgpByDo136hxOKJUxuGr146E8SD7FoGyMhonz
+                 keKTDmC5ErbaBH3XBSgZfkOs0DnuK3EcadXu8hkfSp/0QKKbt8Af2E2oCe+j8vAm
+                 D0EjaQMqAweIXEyad5A9H9IvdMDnFVN/jZ2PePQ+9vMRGsxOA36zTUy8XeMvuYXl
+                 ng1FE1Duoz0xDhnP6XFz+iyPQkj0V6SRQHcPqN6IjjySxTsiCvAyk5fsp/EouaxF
+                 5dFtZ7fm17Om19qo243GzcjQ5vpW8uZEE0EdGv9mivOdTywnbi9S5Pk83IK5zjp0
+                 84qsz/dPtDYH/Ckx6kTvCJSQ4EvfmRPiWgdOZFB9P/FHI7Bm5doctzJI6qhv1kw6
+                 9B9KzFHXX2a0lo2phCaPRkAkuwF9uvueZF3Y1zz7o75ygpnsjQCxCXwYNUzkbUM8
+                 KAx9gEuRPJDeJFtHYcm5faqdCX9w9LYHhVemSYnaDsYM7jyMK0d1Jor3e3Dqlh/5
+                 sY1fHknZjUaJLX8vc4hn2HW9ctyUVMvd6Nlrd9E7sCEii1GivRMBYpYDKOn65heO
+                 YtrfEdYb3CAOr+Ag+XdUhmG0+vgf6ln0qtlc5eofGL4pqk6ahIG14tmg/nS58ZTK
+                 nVBBJ+ylofLk3vN+K/aK0QSfGdDVsvQzQVM6so4t6Q4hZnZR0Pzg0oY4GzMBy6eM
+                 DCJhekHvJloXQzFGiGacpo12WbF61+FpaR4PBZfAVWk9dZvSkxhuZLLikCKZvStQ
+                 n5QHlxXVIoqmNvfa6Oh0kN2NtQklQNeVlAfUXhtWO/v3nWeruVZB5WgevPO2DMkT
+                 TAIGYu5/tmZTQB8gYroo74UI3TPDNPXrOuYrb2UniwAvLAby+d+EbbBuN7qf+RoX
+                 Dnjf7J1rYHkfjmzPN7NZr4xgAJ1Mpnua1CGeVYu0w1CFMR7MVyfcxgNZJBu/dtlN
+                 lc6ojPRag5po2KW2D/48XhAX1+GfHtxUNxhibsgLqt+0YpBi0hRJrgH3t1o1WCrb
+                 EDiSLudL5LXwFpoWzGPxni3pHNV+qBW1rAw5CGapNnR4dr0CYZydn6EA+v2RMrxV
+                 VPmGApb1rPa0ZqU55ye/LYS2RRKftjLeCrj44qcEcW6Q9fvbT66sJShPxkKOFhBM
+                 qmfBtJ4OQpldOLwnY1zh+JGXg5xLSkZmv0pan3Qj+61NYERCYyv2Q+0hmIpI7hAK
+                 FLl+ovWf6PUE19v4k/w951bkdbuIQ2bEWdlDmc6GFKPRwtD3WEMG+frrbMiLychc
+                 YAouFf5Olf4UQZBHCYrmfSGqmKJ30jZOIMHSPwIrtBTYG7lPsZY+rg5Xgy4vxQNf
+                 P+rL6/n42Q12kH2jpOiA5tWzZCLdr5G2dDPlygO5Dzll58YoxcdCw52/AGrIEDM1
+                 OFAnaQgVKdMyln9us9pY1rqhwuVisPfYiiMRR9j3MZfmuExi80ZoLt92CZXkT5QN
+                 z28Fs3hiTOrKhw5aODSxj2qHSXzVt4jLgGZz6Dys/u8mdWOJJ6UdL3XPNny0Xx/2
+                 bySERyF6ukiNu1WhxJyxdCaXZQYwX5h3TVR0QEZ2W9p85WJWUBt7BVXi94Zt0bP2
+                 iFRLAHQ+Ps9iQ2Kc4hG0ZvTz9aganCVdkgcagjMCzXA4xe/YQNoJwBJO4gzgaf+j
+                 frRRLarETqx19CqOTm51AEH95TY+cAgl/22F4KoyDU+JjTLgAQkBWuHjvCflEcXv
+                 diPZ+9dPGh1m8wGYErVQPXWWhxfKX7stiq7/DF+nEk6A9+R5GgURrGTyygfgD9Hg
+                 r3IX4kshEGZQeCJfcilUYbVRRblUKHI+oFQ2J00X/4ji'
+    public_key: 'MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAsDaoN0TLe1Si1DvoiLDu
+                 MJf9fCzqEOsx6wd8vl6eL/6t7GaE0J8csxidJP5PbmX+rXUA2stTWkMWF/dADBef
+                 qBjqx1b2Un6UUEazElObm+frJ4kWJo3FRKUFR4GrUnFJDIYDo5VQEcgAsO3XjsXU
+                 gY7Vy07+ugGX/vI0gZo3MA0DJQ86y2UJm1e8HDJWc/ivkbpSGTDWtZJ3vcIXGB6c
+                 cDoXxmC4ZlDgCojbFni+i5F4myPcINRjWHuqGl4kPpcjYpn5cxA90gyFnBE9llC2
+                 sqabGDuBiYT8ynGOrQgM19N17UpJ4l4TsCxG7bMm+6K/g+A/vUNLxcYuqkHKUroa
+                 BjhmT5F0pBN4zF8vlcXlLt80UXERPmPJhvn6xn1fpDbftJ3Z2btqwibdt4mwnvN/
+                 bnP5fA3XDL8R70CSD0E1toMT95zuDDxyBG5w3S4eZhn/wBGRl7c2myPAuVeA4AEd
+                 LfTB0PS7CVY2+W2r12Nu4SSRCnr3PhB/uFbUcF58SyWw7YT7SLku+w6MhM+f+Ug8
+                 WNh1GFNMN9OWE3lcPKRSC67+pGzf+vlseDHybGBdV+u19CYSmQVwNpGgAxuDW16Y
+                 axhYiVU5v1wtyZV+qy5gf85+I9XCM/F0vePRQSgq1EJ3XtGXoaM3hRT72/vcGYjR
+                 IOn0g5YzXWt6g2wJzqxM5+8CAwEAAQ=='
+    pass_phrase: 'slaptas'
     #token_ttl: 3600
