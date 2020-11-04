@@ -26,6 +26,7 @@ class CartRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('c')
             ->andWhere('c.ship = :val')
+            ->setParameter('val', $value)
             ->getQuery()
             ->getResult()
         ;
