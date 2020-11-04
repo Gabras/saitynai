@@ -19,6 +19,19 @@ class CartRepository extends ServiceEntityRepository
         parent::__construct($registry, Cart::class);
     }
 
+     /**
+      * @return Cart[] Returns an array of Cart objects
+      */
+    public function findByShip($value)
+    {
+        return $this->createQueryBuilder('c')
+            ->andWhere('c.ship = :val')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
+
     // /**
     //  * @return Cart[] Returns an array of Cart objects
     //  */

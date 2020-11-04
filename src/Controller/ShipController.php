@@ -21,9 +21,11 @@ class ShipController extends AbstractApiController
      */
     public function index(Request $request, ShipRepository $repository): Response
     {
-        $customers = $repository->findAll();
-        return  $this->json($customers);
+        $ships = $repository->findAll();
+        return  $this->json($ships);
     }
+
+
 
     /**
      * @Route("/ships", methods={"POST"})

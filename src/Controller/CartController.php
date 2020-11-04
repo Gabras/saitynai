@@ -52,6 +52,16 @@ class CartController extends AbstractApiController
     }
 
     /**
+     * @Route("/carts/{shipID}", methods={"GET"}, requirements={"shipID"="\d+"})
+     */
+    public function cartsByShip(Request $request, CartRepository $cartRepository, ShipRepository $shipRepository, $shipID): Response
+    {
+        $ship = $shipRepository->findOneBy($shipID);
+        $carts = $cartRepository->findByShip($ship);
+        return  $this->json($carts);
+    }
+
+    /**
      * @Route("/carts/{id}", methods={"DELETE"}, requirements={"id"="\d+"})
      */
     public function deleteAction(Request $request, CartRepository $repository, $id): Response
